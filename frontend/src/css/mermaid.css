@@ -1,0 +1,12 @@
+
+.mermaid-container {
+    /* overflow: auto;  Add scrollbars when content is larger than the container */
+    width: 100%;    /* Adjust width to fit within parent container */
+    height: 100%;   /* Adjust height to fit within parent container */
+}
+  
+.mermaid {
+    display: inline-block;
+    transition: transform 0.3s ease;
+    transform-origin: 0 0; /* Top left corner */
+}
