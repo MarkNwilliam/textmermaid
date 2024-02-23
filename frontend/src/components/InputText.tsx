@@ -1,5 +1,5 @@
 import {
-  AIMessage,
+
   HumanMessage,
   SystemMessage,
 } from "@langchain/core/messages";
@@ -7,28 +7,15 @@ import { FC, useState } from "react";
 
 import { ChatOpenAI } from "@langchain/openai";
 import { ChatPromptTemplate } from "@langchain/core/prompts";
-import { SYSTEM_PROMPT } from "../prompts/system_prompt";
+
 import { StringOutputParser } from "@langchain/core/output_parsers";
 
 import Swal from 'sweetalert2';
 
 
-const model = new ChatOpenAI({
-  temperature: 0.0,
-  //   modelName: "gpt-4-1106-preview",
-  modelName: "gpt-4-1106-preview",
-  maxTokens: 1000,
-  openAIApiKey: import.meta.env.VITE_OPENAI_API_KEY as string,
-});
+
 
 const outputParser = new StringOutputParser();
-
-type ChatHistory = (AIMessage | HumanMessage | SystemMessage)[];
-const SystemPrompt = new SystemMessage(SYSTEM_PROMPT);
-
-interface InputTextProps {
-  setInput: (input: string) => void;
-}
 
 const InputText: FC<InputTextProps> = ({ setInput }) => {
   const [inputText, setInputText] = useState<string>("");
