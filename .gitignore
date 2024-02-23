@@ -1,0 +1,23 @@
+# Python virtual environment
+myenv/
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Local development settings
+.env
+
+# IDE files
+.vscode/
+.idea/
+
+# Compiled source
+/dist/
+/build/
+
+# Dependency directories
+/node_modules/
+
+# SQLite database
+default.sqlite
